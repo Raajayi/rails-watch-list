@@ -1,0 +1,9 @@
+<%= link_to "Back to List", list_path(@list), class: "btn btn-secondary"%>
+<h1>Edit <%= @bookmark.movie.title %></h1>
+
+<%= simple_form_for @bookmark do |f| %>
+  <%= f.association :movie %>
+  <%= f.input :priority, collection: Bookmark::PRIORITY_OPTIONS %>
+  <%= f.input :comment %>
+  <%= f.submit %>
+<% end %>
