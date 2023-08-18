@@ -1,4 +1,3 @@
-<%= link_to "Back to All Lists", lists_path, class: "btn btn-secondary"%>
 <div class="container">
   <h1><%= @list.name %></h1>
   <div>
@@ -24,3 +23,5 @@
     <% bookmark.movie.poster_url %>
   <% end %>
 </div>
+
+<%= cl_image_tag @list.photo.key, width: 400, height: 300, crop: :fill %>
