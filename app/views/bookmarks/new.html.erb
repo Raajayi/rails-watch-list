@@ -1,5 +1,5 @@
-<h1>Create a new bookmark</h1>
 <%= link_to "Back to List", list_path(@list), class: "btn btn-secondary"%>
+<h1>Create a new bookmark</h1>
 
 <%= simple_form_for [@list,@bookmark] do |f| %>
   <%= f.association :movie %>
