@@ -4,4 +4,8 @@ class List < ApplicationRecord
 
   validates :name, presence: true
   validates :name, uniqueness: true
+
+  def prioritized_bookmarks
+    Bookmark.where(list: self).order('priority ASC')
+  end
 end

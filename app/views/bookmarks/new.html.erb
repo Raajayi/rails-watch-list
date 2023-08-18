@@ -3,6 +3,7 @@
 
 <%= simple_form_for [@list,@bookmark] do |f| %>
   <%= f.association :movie %>
+  <%= f.input :priority, collection: Bookmark::PRIORITY_OPTIONS %>
   <%= f.input :comment %>
   <%= f.submit %>
 <% end %>
